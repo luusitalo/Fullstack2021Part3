@@ -1,0 +1,32 @@
+{
+  "name": "fullstack2021part3",
+  "version": "1.0.0",
+  "description": "UH Fullstack course part 3 exercises",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luusitalo/Fullstack2021Part3.git"
+  },
+  "keywords": [
+    "Fullstack",
+    "course",
+    "part3"
+  ],
+  "author": "Laura Uusitalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luusitalo/Fullstack2021Part3/issues"
+  },
+  "homepage": "https://github.com/luusitalo/Fullstack2021Part3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
