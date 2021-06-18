@@ -3,7 +3,11 @@ const { timeStamp } = require('console')
 const express = require('express')
 const app = express()
 
+var morgan = require('morgan')
+
 app.use(express.json())
+
+app.use(morgan('tiny'))
 
 const http = require('http')
 
@@ -95,7 +99,9 @@ app.post('/api/persons', (request, response) => {
   persons = persons.concat(person)
   response.json(person)
 })
-  
+
+
+
 
 //const app = http.createServer((request, response) => {
 //    response.writeHead(200, { 'Content-Type': 'application/json' })
