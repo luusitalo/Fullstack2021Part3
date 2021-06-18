@@ -63,25 +63,25 @@ app.delete('/api/persons/:id', (request, response) => {
 })
 
 app.post('/api/persons', (request, response) => {
-    const added = request.body
+    const person = request.body
 
     console.log(request.body)
  
-  if (!added.name) {
+  if (!person.name) {
     return response.status(400).json({ 
       error: 'name missing' 
     })
   }
 
-  if (!added.number) {
+  if (!person.number) {
     return response.status(400).json({ 
       error: 'number missing' 
     })
   }
 
-  const match = persons.find(match => match.name == added.name)
+  const match = persons.find(match => match.name == person.name)
 
-  if (!match) {
+  if (match) {
     response.status(400).json({
       error: 'Name exists already'
     })
